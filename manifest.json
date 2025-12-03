@@ -1,7 +1,7 @@
 {
 	"id": "obsidian-asciimath-publishing",
 	"name": "asciimath-publishing",
-	"version": "0.0.1",
+	"version": "0.0.2",
 	"minAppVersion": "0.15.0",
 	"description": "Add asciimath support for Obsidian publishing.",
 	"author": "iasandcb",

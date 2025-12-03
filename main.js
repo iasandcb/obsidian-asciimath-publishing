@@ -189,7 +189,7 @@ function N(o, e, t, n) {
   return o;
 }
 function W(o, e) {
-  return { current: o + 1, node: { type: "Const", value: e.value, tex: e.tex === "|" ? "\\mid" : e.tex } };
+  return { current: o + 1, node: { type: "Const", value: e.value, tex: e.tex === "|" ? "|" : e.tex } };
 }
 function h(o) {
   let e = o.body[0], t = o.body[o.body.length - 1];
