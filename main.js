@@ -624,7 +624,7 @@ function S(o = {}) {
 }
 function te(o) {
   var _a;
-  let e = { display: true, symbols: { dx: { type: "Const", tex: "{\\text{d}x}" }, dy: { type: "Const", tex: "{\\text{d}y}" }, dz: { type: "Const", tex: "{\\text{d}z}" }, dt: { type: "Const", tex: "{\\text{d}t}" }, "#": { type: "Const", tex: "\\displaystyle" }, atop: { type: "OperatorAOB", tex: "{ $1 \\atop $2 }" } }, replaceBeforeTokenizing: [[/([^\n])\n(?!\n)/g, "$1\n\n"],[/&#(x?[0-9a-fA-F]+);/g, (t, n) => String.fromCodePoint(n[0] === "x" ? `0${n}` : n)]] };
+  let e = { display: true, symbols: { dx: { type: "Const", tex: "{\\text{d}x}" }, dy: { type: "Const", tex: "{\\text{d}y}" }, dz: { type: "Const", tex: "{\\text{d}z}" }, dt: { type: "Const", tex: "{\\text{d}t}" }, "#": { type: "Const", tex: "\\displaystyle" }, atop: { type: "OperatorAOB", tex: "{ $1 \\atop $2 }" } }, replaceBeforeTokenizing: [[/;[ \t]*\n(?!\n)/g, "; "],[/([^\n])\n(?!\n)/g, "$1\n\n"],[/&#(x?[0-9a-fA-F]+);/g, (t, n) => String.fromCodePoint(n[0] === "x" ? `0${n}` : n)]] };
   return typeof (o == null ? void 0 : o.display) < "u" && (e.display = o.display), (o == null ? void 0 : o.symbols) && (Array.isArray(o.symbols) ? o.symbols.forEach(([t, n]) => {
     e.symbols[t] = n;
   }) : e.symbols = { ...e.symbols, ...o.symbols }), ((_a = o == null ? void 0 : o.replaceBeforeTokenizing) == null ? void 0 : _a.length) && e.replaceBeforeTokenizing.push(...o.replaceBeforeTokenizing), e;
